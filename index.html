@@ -3,8 +3,46 @@
 <head>
     <meta charset="utf-8">
     <title>Point to Point!</title>
+    <script>
+        // callAPI function that takes the latitude and longitude numbers as parameters
+        var callAPI = (lat1, lon1, lat2, lon2) => {
+        // instantiate a headers object
+        var myHeaders = new Headers();
+        // add content type header to object
+        myHeaders.append("Content-Type", "application/json");
+        // using built in JSON utility package turn object to string and store in a variable
+        var raw = JSON.stringify({"lat1":lat1,"lon1":lon1,"lat2":lat2,"lon2":lon2});
+        // create a JSON object with parameters for API call and store in a variable
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+        // make API call with parameters and use promises to get response
+        // add the API endpoint URL <API-URL> to the code below
+        fetch("<API-URL>", requestOptions)
+        .then(response => response.text())
+        .then(result => alert(JSON.parse(result).body))
+        .catch(error => console.log('error', error));
+        }
+    </script>
 </head>
 <body>
     <h1>Point to Point!</h1>
-    <p>Calculate distance between two points here</p>
+    <p>Please enter the latitude and longitude in decimal degrees for two points, then click Calculate to find distance in kilometers between the two points.</p>
+    <form>
+        <label>Latitude 1:</label> 
+        <input type="text" name="lat1" id="lat1">
+        <label>Longitude 1:</label>
+        <input type="text" name="lon1" id="lon1">
+        <br><br>
+        <label>Latitude 2:</label>
+        <input type="text" name="lat2" id="lat2">
+        <label>Longitude 2:</label>
+        <input type="text" name="lon2" id="lon2">
+        <br><br>
+        <!-- set button onClick method to call the defined lambda function with input values as parameters -->
+        <button type="button" onClick="callAPI(document.getElementById('lat1').value, document.getElementById('lon1').value, document.getElementById('lat2').value, document.getElementById('lon2').value)">Calculate</button>
+    </form>
 </html>
