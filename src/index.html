@@ -20,8 +20,8 @@
             redirect: 'follow'
         };
         // make API call with parameters and use promises to get response
-        // add the API endpoint URL <API-URL> to the code below
-        fetch("<API-URL>", requestOptions)
+        // revert the changes here before commiting
+        fetch("https://hclbrxerp7.execute-api.ca-central-1.amazonaws.com/dev", requestOptions)
         .then(response => response.text())
         .then(result => alert(JSON.parse(result).body))
         .catch(error => console.log('error', error));
