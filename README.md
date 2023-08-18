@@ -27,4 +27,4 @@ Thanks to ZTM Academy for the [ZTM Projects Extravaganza](https://academy.zeroto
 - [ ] Add a map to show the points and the distance between them
 - [ ] Calculate the distance in miles as well
 - [ ] Add proper testing
-- [ ] Try to follow TTD for other projects
+- [ ] Try to follow TDD for other projects
