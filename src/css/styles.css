@@ -1,0 +1,36 @@
+body {
+    background-color:#C4C2DB;
+}
+
+h1 {
+    background-color: #dd7973;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    font-size: 100px;
+    text-align: center;
+}
+
+p {
+    color: black;
+    font-size: 25px;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    margin: 50px;
+    font-size: 25px;
+
+}
+
+button {
+    background-color: #dd7973;
+    font-size: medium;
+    font-weight: bold;
+    padding: 14px;
+    margin: 4px 0;
+    border-radius: 10px;
+    border-color: #dd7973;
+    cursor: pointer;
+}

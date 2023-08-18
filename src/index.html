@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Point to Point!</title>
+    <link rel="stylesheet" href="css/styles.css">
     <script>
         // callAPI function that takes the latitude and longitude numbers as parameters
         var callAPI = (lat1, lon1, lat2, lon2) => {
@@ -43,6 +44,6 @@
         <input type="text" name="lon2" id="lon2">
         <br><br>
         <!-- set button onClick method to call the defined lambda function with input values as parameters -->
-        <button type="button" onClick="callAPI(document.getElementById('lat1').value, document.getElementById('lon1').value, document.getElementById('lat2').value, document.getElementById('lon2').value)">Calculate</button>
+        <button type="button" onClick="callAPI(document.getElementById('lat1').value, document.getElementById('lon1').value, document.getElementById('lat2').value, document.getElementById('lon2').value)">CALCULATE</button>
     </form>
 </html>
